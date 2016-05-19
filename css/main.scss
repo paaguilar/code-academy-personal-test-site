@@ -66,40 +66,49 @@ svg {
   margin: auto;
 }
 
-#Whites {
+.Whites {
   animation: blink 2.4s infinite;
 }
 
-#Pupil {
-  animation: squeeze 2.4s infinite;
+.Pupil {
+  animation: blink infinite;
+  animation-duration: 8s;
 }
 
 // @keyframes blink {
-//   90% {
-//     transform: none;
-//     animation-timing-function: ease-in;
-//   }
-//   93% {
-//     transform: translateY(15px) scaleY(10)
-//   }
-//   100% {
-//     animation-timing-function: ease-out;
+//   1% {
+//     transform: scaleX(1) scaleY(.001);
+//     transform-origin: center;
+//     transform-style: flat;
+//     transition-timing-function: cubic-bezier(.39, .97, .71, .2);
 //   }
 // }
 
-@keyframes squeeze {
-  90% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0.48, 0.01, 0.58, 1);
+@keyframes blink {
+  0% {
+    transform: scaleX(1) scaleY(1);
   }
-  93% {
-    transform: translateY(15px) scaleY(0.95)
+  1% {
+    transform: scaleX(1) scaleY(0.001);
+    transform-origin: center;
+  }
+  2% {
+    transform: scaleX(1) scaleY(1);
+  }
+  60% {
+    transform: scaleX(1) scaleY(1);
+  }
+  61% {
+    transform: scaleX(1) scaleY(0.001);
+    transform-origin: center;
+  }
+  62% {
+    transform: scaleX(1) scaleY(1);
   }
   100% {
-    animation-timing-function: cubic-bezier(0.48, 0.01, 0.58, 1);
+    transform: scaleX(1) scaleY(1);
   }
 }
-
 
 
 // Use media queries like this:
@@ -123,3 +132,5 @@ svg {
         "layout",
         "syntax-highlighting"
 ;
+
+
