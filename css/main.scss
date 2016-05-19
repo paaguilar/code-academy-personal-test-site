@@ -56,6 +56,51 @@ $on-laptop:        800px;
   max-width: 50%;
 }
 
+/*
+Icon: Daniel Bruce, danielbruce.se, flaticon.com
+Animation: Federico Brigante, bfred.it
+for Wildlife.la and Kia
+*/
+
+svg {
+  margin: auto;
+}
+
+#Whites {
+  animation: blink 2.4s infinite;
+}
+
+#Pupil {
+  animation: squeeze 2.4s infinite;
+}
+
+// @keyframes blink {
+//   90% {
+//     transform: none;
+//     animation-timing-function: ease-in;
+//   }
+//   93% {
+//     transform: translateY(15px) scaleY(10)
+//   }
+//   100% {
+//     animation-timing-function: ease-out;
+//   }
+// }
+
+@keyframes squeeze {
+  90% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0.48, 0.01, 0.58, 1);
+  }
+  93% {
+    transform: translateY(15px) scaleY(0.95)
+  }
+  100% {
+    animation-timing-function: cubic-bezier(0.48, 0.01, 0.58, 1);
+  }
+}
+
+
 
 // Use media queries like this:
 // @include media-query($on-palm) {
