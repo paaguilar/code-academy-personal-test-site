@@ -31,12 +31,16 @@ $on-laptop:        800px;
 .Aligner {
   display: flex;
   align-items: center;
+  min-height: 24em;
   justify-content: center;
-  margin-top: 12%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%
 }
 
 .Aligner-item {
-  max-width: 50%;
+  flex: 1;
 }
 
 .Aligner-item--top {
@@ -45,6 +49,11 @@ $on-laptop:        800px;
 
 .Aligner-item--bottom {
   align-self: flex-end;
+}
+
+.Aligner-item--fixed {
+  flex: none;
+  max-width: 50%;
 }
 
 
