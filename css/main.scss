@@ -28,6 +28,23 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Aligner-item {
+  max-width: 50%;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
 
 
 // Use media queries like this:
